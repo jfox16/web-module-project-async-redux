@@ -27,6 +27,7 @@ const fadeInAnimation = keyframes`
 const StyledFoodImg = styled.img`
   height: 250px;
   width: auto;
+  max-width: 400px;
   flex-grow: 1;
   object-fit: cover;
   padding: 1px;
@@ -35,10 +36,12 @@ const StyledFoodImg = styled.img`
 
   @media (max-width: 768px) {
     height: 150px;
+    max-width: 240px;
   }
 
   @media (max-width: 400px) {
     height: 100px;
+    max-width: 160px;
   }
 `;
 

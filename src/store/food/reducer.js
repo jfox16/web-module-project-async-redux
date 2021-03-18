@@ -8,27 +8,7 @@ import {
 const initialState = {
   isLoading: false,
   error: '',
-  // images: []
-  images: [
-    "https://foodish-api.herokuapp.com/images/dessert/dessert21.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger54.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger55.jpg",
-    "https://foodish-api.herokuapp.com/images/pizza/pizza60.jpg",
-    "https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken8.jpg",
-    "https://foodish-api.herokuapp.com/images/dessert/dessert8.jpg",
-    "https://foodish-api.herokuapp.com/images/dessert/dessert21.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger54.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger55.jpg",
-    "https://foodish-api.herokuapp.com/images/pizza/pizza60.jpg",
-    "https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken8.jpg",
-    "https://foodish-api.herokuapp.com/images/dessert/dessert8.jpg",
-    "https://foodish-api.herokuapp.com/images/dessert/dessert21.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger54.jpg",
-    "https://foodish-api.herokuapp.com/images/burger/burger55.jpg",
-    "https://foodish-api.herokuapp.com/images/pizza/pizza60.jpg",
-    "https://foodish-api.herokuapp.com/images/butter-chicken/butter-chicken8.jpg",
-    "https://foodish-api.herokuapp.com/images/dessert/dessert8.jpg",
-  ]
+  images: []
 }
 
 export const reducer = (state = initialState, action) => {
@@ -43,7 +23,7 @@ export const reducer = (state = initialState, action) => {
     case FETCH_FOOD_SUCCESS:
       return {
         ...state,
-        images: action.payload,
+        images: [ ...state.images, ...action.payload ],
         isLoading: false
       };
 

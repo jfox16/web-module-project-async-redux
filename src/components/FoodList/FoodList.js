@@ -47,19 +47,19 @@ const FoodList = (props) => {
 
   return (
     <StyledFullWidthContainer>
-      <StyledFoodList>
-        {!isLoading && !error &&
-          foodImages?.map((foodImage, i) => (
-            <FoodListItem
-              src={foodImage}
-              key={i}
-              i={i}
-              onLoad={() => handleImageLoad(i)}
-              showImage={highestLoaded >= i}
-            />
-          ))
-        }
-      </StyledFoodList>
+        <StyledFoodList>
+          {!isLoading && !error &&
+            foodImages?.map((foodImage, i) => (
+              <FoodListItem
+                src={foodImage}
+                key={i}
+                i={i}
+                onLoad={() => handleImageLoad(i)}
+                showImage={highestLoaded >= i}
+              />
+            ))
+          }
+        </StyledFoodList>
     </StyledFullWidthContainer>
   );
 }

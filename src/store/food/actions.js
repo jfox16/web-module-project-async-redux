@@ -8,7 +8,7 @@ import {
 } from './actionTypes';
 
 const BASE_URL = 'https://foodish-api.herokuapp.com/api'
-const NUM_IMAGES = 20;
+const NUM_IMAGES = 50;
 
 export const fetchFood = () => {
   return (dispatch) => {
